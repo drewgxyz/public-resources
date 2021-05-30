@@ -1,0 +1,1 @@
+To run this, you need Microsoft SQL software and to change the app.config file to your PC name/directory for the server to connect properly. If you have issue with setting this up I can guide you through it/or there is a complimentory video present called "Walkthrough.mp4" which shows the software working.

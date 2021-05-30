@@ -1,0 +1,6 @@
+go to (localhost, then to PHP MyAdmin SQL)
+http://127.0.0.1/eds-modules/phpmyadmin470x181105133502/
+
+new > database called "login"
+new > table called "users" with 3 collumns (user ID, email, password)
+have ID to A_I (auto inrement), so goes 1,2,3,4 >>>> x

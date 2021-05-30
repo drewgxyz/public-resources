@@ -1,0 +1,19 @@
+1) You need to download "Microsoft SQL Server Management Studio 17"
+2) You need to set the SQL server name to your own PC name ( this can be found by going Windows Search Box > "About my PC" > look for "Device name") and put that in the SQL server name
+3) Go to the ....OOP Resub\Drews_Goods\Drew's Goods\App.config and change where it sais "DGPC" to your Device name from earlier (e.g KatiePC)
+4) run the SQL server
+5) launch the software
+6) Login with:
+Username: Drew
+Password: drewsgoods
+
+I have also included a .mp4 file AND a youtube upload link showing the help page I have added to cover the P6 criteria however, so you don't need to do any of this hassle!
+
+Thanks.
+
+Any issues please do let me know by either replying or my email is
+
+drew.gillies@hotmail.co.uk
+
+Cheers
+Have a good summer.

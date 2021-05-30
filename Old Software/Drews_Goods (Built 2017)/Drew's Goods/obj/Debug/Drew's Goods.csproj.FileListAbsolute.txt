@@ -1,0 +1,22 @@
+C:\Users\Stan\source\repos\Drew's Goods\Drew's Goods\bin\Debug\Drew's Goods.exe.config
+C:\Users\Stan\source\repos\Drew's Goods\Drew's Goods\bin\Debug\Drew's Goods.exe
+C:\Users\Stan\source\repos\Drew's Goods\Drew's Goods\bin\Debug\Drew's Goods.pdb
+C:\Users\Stan\source\repos\Drew's Goods\Drew's Goods\obj\Debug\Drew's Goods.csprojAssemblyReference.cache
+C:\Users\Stan\source\repos\Drew's Goods\Drew's Goods\obj\Debug\Drew_s_Goods.Login.resources
+C:\Users\Stan\source\repos\Drew's Goods\Drew's Goods\obj\Debug\Drew_s_Goods.Properties.Resources.resources
+C:\Users\Stan\source\repos\Drew's Goods\Drew's Goods\obj\Debug\Drew's Goods.csproj.GenerateResource.cache
+C:\Users\Stan\source\repos\Drew's Goods\Drew's Goods\obj\Debug\Drew's Goods.csproj.CoreCompileInputs.cache
+C:\Users\Stan\source\repos\Drew's Goods\Drew's Goods\obj\Debug\Drew's Goods.exe
+C:\Users\Stan\source\repos\Drew's Goods\Drew's Goods\obj\Debug\Drew's Goods.pdb
+C:\Users\Stan\source\repos\Drew's Goods\Drew's Goods\obj\Debug\Drew_s_Goods.Drews_Goods.resources
+C:\Users\drewg\Dropbox\Big Fatty OOP\Drews_Goods\Drew's Goods\bin\Debug\Drew's Goods.exe.config
+C:\Users\drewg\Dropbox\Big Fatty OOP\Drews_Goods\Drew's Goods\bin\Debug\Drew's Goods.exe
+C:\Users\drewg\Dropbox\Big Fatty OOP\Drews_Goods\Drew's Goods\bin\Debug\Drew's Goods.pdb
+C:\Users\drewg\Dropbox\Big Fatty OOP\Drews_Goods\Drew's Goods\obj\Debug\Drew's Goods.csprojAssemblyReference.cache
+C:\Users\drewg\Dropbox\Big Fatty OOP\Drews_Goods\Drew's Goods\obj\Debug\Drew_s_Goods.Drews_Goods.resources
+C:\Users\drewg\Dropbox\Big Fatty OOP\Drews_Goods\Drew's Goods\obj\Debug\Drew_s_Goods.Login.resources
+C:\Users\drewg\Dropbox\Big Fatty OOP\Drews_Goods\Drew's Goods\obj\Debug\Drew_s_Goods.Properties.Resources.resources
+C:\Users\drewg\Dropbox\Big Fatty OOP\Drews_Goods\Drew's Goods\obj\Debug\Drew's Goods.csproj.GenerateResource.cache
+C:\Users\drewg\Dropbox\Big Fatty OOP\Drews_Goods\Drew's Goods\obj\Debug\Drew's Goods.csproj.CoreCompileInputs.cache
+C:\Users\drewg\Dropbox\Big Fatty OOP\Drews_Goods\Drew's Goods\obj\Debug\Drew's Goods.exe
+C:\Users\drewg\Dropbox\Big Fatty OOP\Drews_Goods\Drew's Goods\obj\Debug\Drew's Goods.pdb
