@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>{GCA} Cowrie Setup</title>
+
+<style>
+      body {width: 50%; text-align: center; margin: auto;}
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
+}
+      .content {
+  max-width: 500px;
+  margin: auto;
+  width: 50%;
+}*{box-sizing:border-box;}input{ text-align: center;}[type=text], select, textarea{width:100%;padding:12px;border:1px solid #ccc;border-radius:4px;resize:vertical; text-align: center;}label{text-align: center; padding:12px 12px 12px 0;display:inline-block;}input[type=submit]{text-align: center; background-color:#4CAF50;color:white;padding:12px 20px;border:none;border-radius:4px;cursor:pointer;float:right;}input{ text-align: center;}[type=submit]:hover{background-color:#45a049;}.container{border-radius:5px;background-color:#f2f2f2;padding:20px;}.col-25{float:left;width:25%;margin-top:6px;}.col-75{float:left;width:75%;margin-top:6px;}.row:after{content:"";display:table;clear:both;}@media screen and (max-width:600px){.col-25, .col-75, input[type=submit]{width:100%;margin-top:0;text-align: center; }}</style>
+
+  </head>
+  <body>
+
+	<script src="index.js"></script>
+<div class "content">
+    <h1> Cowrie Customisation </h1>
+    <h3> This form is a simplified version of the CLI, so for best customisability please utilise the CLI functionality of this tool. Suggestions/bugs/want something added? Please email drewg@ctdg.xyz! </h3>
+    <form action="/process" method="POST">
+    <!-- This code will interact with the "processor" function within main.go, by sending a request to /process (which main.go listens for, and redirects to PROCESSOR function) -->
+    <!-- The 'name' tag, is what golang looks too. "id" is for HTML element navigation, "name" for golang -->
+    <hr class="rounded">
+    <label for="hostname"> HOSTNAME </label>
+    <input type="Text" name="FORMcustomHostname" id="hostname" placeholder="Hostname for the honeypot. Displayed by the shell prompt of the virtual enviroment">
+
+    <label for="timezone"> TIMEZONE </label>
+    <input type="Text" name="FORMcustomTimezone" id="timezone" placeholder="Timezone Cowrie uses for logging.">
+
+    <label for="outaddr"> OUT ADDR </label>
+    <input type="Text" name="FORMcustomOut_addr" id="outaddr" placeholder="IP address to bind to when opening outgoing connections. Used by wget/curl.">
+
+    <label for="fakeaddr"> FAKE ADDR </label>
+    <input type="Text" name="FORMcustomFake_addr" id="fakeaddr" placeholder="Fake address displayed as the address of the incoming connection.">
+
+    <label for="internetfaceaddr"> INTERNET FACE ADDR </label>
+    <input type="Text" name="FORMcustomInternetFace_addr" id="internetfaceaddr" placeholder="The IP address on which this machine is reachable on from the internet.">
+
+    <label for="reportpubIP"> REPORT PUBLIC IP (YES/NO) </label>
+    <input type="Text" name="FORMcustomBoolReportPubIP_addr" id="reportpubIP" placeholder="Enable to log the public IP of the honeypot (useful if listening on 127.0.0.1)">
+
+    <label for="reportedsshport"> REPORTED SSH PORT </label>
+    <input type="Text" name="FORMreported_ssh_port" id="reportedsshport" placeholder="Source Port to report in logs">
+
+    <label for="usenatremotepool"> USE NAT REMOTE POOL </label>
+    <select name="FORMuseNAT_remote_pool_set" id="usenatremotepool" placeholder="Use NAT (for remote pool)">
+    <option value="true">True</option>
+    <option value="false">False</option> </select>
+
+    <label for="natpublicIPset"> NAT PUBLIC IP SET </label>
+    <input type="Text" name="FORMnat_public_IP_set" id="natpublicIPset" placeholder="Reported public NAT IP">
+
+    <label for="backendsshostset"> BACKEND SSH HOST SET </label>
+    <input type="Text" name="FORMbackend_ssh_host_set" id="backendsshostset" placeholder="Simple Backend Configuration">
+
+    <label for="backendsshportset"> BACKEND SSH PORT SET </label>
+    <input type="Text" name="FORMbackend_ssh_port_set" id="backendsshportset" placeholder="Simple Backend Configuration">
+
+    <label for="backendtelnethostset"> BACKEND TELNET HOST SET </label>
+    <input type="Text" name="FORMbackend_telnet_host_set" id="backendtelnethostset" placeholder="Simple Backend Configuration">
+
+    <label for="backendtelnetportset"> BACKEND TELNET PORT SET </label>
+    <input type="Text" name="FORMbackend_telnet_port_set" id="backendtelnetportset" placeholder="Simple Backend Configuration">
+
+    <label for="backendusername"> BACKEND USERNAME </label>
+    <input type="Text" name="FORMbackend_username" id="oer" placeholder="Real credentials to log into backend">
+
+    <label for="backendpassword"> BACKEND PASSWORD </label>
+    <input type="Text" name="FORMbackend_password" id="per" placeholder="Real credentials to log into backend">
+
+    <label for="lograwset"> LOG RAW SET </label>
+    <select name="FORMlog_raw_set" id="qer" placeholder="Log raw TCP packets in SSh and Telnet">
+    <option value="true">True</option>
+    <option value="false">False</option> </select>
+
+    <label for="archsetup"> ARCH SETUP </label>
+    <select name="FORMarch_setup" id="rer" placeholder="Fake architectures/OS">
+    <option value="bsd-aarch64-lsb">bsd-aarch64-lsb: 64-bit LSB ARM aarch64 version 1 </option>
+    <option value="bsd-aarch64-msb22">bsd-aarch64-msb: 64-bit MSB ARM aarch64 version 1 </option>
+    <option value="bsd-bfin-msb">bsd-bfin-msb: 32-bit MSB Analog Devices Blackfin version 1 </option>
+    <option value="bsd-mips-lsb">bsd-mips64-lsb: 64-bit LSB MIPS MIPS-III version 1 </option>
+    <option value="bsd-mips-msb">bsd-mips64-msb: 64-bit MSB MIPS MIPS-III version 1 </option>
+    <option value="bsd-mips64-lsb">bsd-mips-lsb: 32-bit LSB MIPS MIPS-I version 1 </option>
+    <option value="bsd-mips64-msb">bsd-mips-msb: 32-bit MSB MIPS MIPS-I version 1 </option>
+    <option value="bsd-powepc-msb">bsd-powepc64-lsb: 64-bit MSB 64-bit PowerPC or cisco 7500 version 1 </option>
+    <option value="bsd-powepc64-lsb">bsd-powepc-msb: 32-bit MSB PowerPC or cisco 4500 version 1 </option>
+    <option value="bsd-riscv64-lsb">bsd-riscv64-lsb: 64-bit LSB UCB RISC-V version 1 </option>
+    <option value="bsd-sparc-msb">bsd-sparc64-msb: 64-bit MSB SPARC V9 relaxed memory ordering version 1 </option>
+    <option value="bsd-sparc64-msb">bsd-sparc-msb: 32-bit MSB SPARC version 1 </option> statically </option>
+    <option value="bsd-x32-lsb">bsd-x32-lsb: 32-bit LSB Intel 80386 version 1 </option>
+    <option value="bsd-x64-lsb">bsd-x64-lsb: 64-bit LSB x86-64 version 1 </option>
+    <option value="linux-aarch64-lsb">linux-aarch64-lsb: 64-bit LSB ARM aarch64 version 1 </option>
+    <option value="linux-aarch64-msb">linux-aarch64-msb: 64-bit MSB ARM aarch64 version 1 </option>
+    <option value="linux-alpha-lsb">linux-alpha-lsb: 64-bit LSB Alpha (unofficial) version 1 </option>
+    <option value="linux-am33-lsb">linux-am33-lsb: 32-bit LSB Matsushita MN10300 version 1 </option>
+    <option value="linux-arc-lsb">linux-arc-lsb: 32-bit LSB ARC Cores Tangent-A5 version 1 </option>
+    <option value="linux-arc-msb">linux-arc-msb: 32-bit MSB ARC Cores Tangent-A5 version 1 </option>
+    <option value="linux-arm-lsb">linux-arm-lsb: 32-bit LSB ARM EABI5 version 1 </option>
+    <option value="linux-arm-msb">linux-arm-msb: 32-bit MSB ARM EABI5 version 1 </option>
+    <option value="linux-avr32-lsb">linux-avr32-lsb: 32-bit LSB Atmel AVR 8-bit version 1 </option>
+    <option value="linux-bfin-lsb">linux-bfin-lsb: 32-bit LSB Analog Devices Blackfin version 1 </option>
+    <option value="linux-c6x-lsb">linux-c6x-lsb: 32-bit LSB TI TMS320C6000 DSP family version 1 </option>
+    <option value="linux-c6x-msb">linux-c6x-msb: 32-bit MSB TI TMS320C6000 DSP family version 1 </option>
+    <option value="linux-cris-lsb">linux-cris-lsb: 32-bit LSB Axis cris version 1 </option>
+    <option value="linux-frv-msb">linux-frv-msb: 32-bit MSB Cygnus FRV (unofficial) version 1 </option>
+    <option value="linux-h8300-msb">linux-h8300-msb: 32-bit MSB Renesas H8/300 version 1 </option>
+    <option value="linux-hppa-msb">linux-hppa64-msb: 64-bit MSB PA-RISC 02.00.00 (LP64) version 1 </option>
+    <option value="linux-hppa64-msb">linux-hppa-msb: 32-bit MSB PA-RISC *unknown arch 0xf* version 1 (GNU/Linux)
+    <option value="linux-ia64-lsb">linux-ia64-lsb: 64-bit LSB IA-64 version 1 </option>
+    <option value="linux-m32r-msb">linux-m32r-msb: 32-bit MSB Renesas M32R version 1 </option>
+    <option value="linux-m68k-msb">linux-m68k-msb: 32-bit MSB Motorola m68k 68020 version 1 </option>
+    <option value="linux-microblaze-msb">linux-microblaze-msb: 32-bit MSB Xilinx MicroBlaze 32-bit RISC version 1 </option>
+    <option value="linux-mips-lsb">linux-mips64-lsb: 64-bit LSB MIPS MIPS-III version 1 </option>
+    <option value="linux-mips-msb">linux-mips64-msb: 64-bit MSB MIPS MIPS-III version 1 </option>
+    <option value="linux-mips64-lsb">linux-mips-lsb: 32-bit LSB MIPS MIPS-I version 1 </option>
+    <option value="linux-mips64-msb">linux-mips-msb: 32-bit MSB MIPS MIPS-I version 1 </option>
+    <option value="linux-mn10300-lsb">linux-mn10300-lsb: 32-bit LSB Matsushita MN10300 version 1 </option>
+    <option value="linux-nios-lsb">linux-nios-lsb: 32-bit LSB Altera Nios II version 1 </option>
+    <option value="linux-nios-msb">linux-nios-msb: 32-bit MSB Altera Nios II version 1 </option>
+    <option value="linux-powerpc-lsb">linux-powerpc64-lsb: 64-bit LSB 64-bit PowerPC or cisco 7500 version 1 </option>
+    <option value="linux-powerpc-msb">linux-powerpc64-msb: 64-bit MSB 64-bit PowerPC or cisco 7500 version 1 </option>
+    <option value="linux-powerpc64-lsb">linux-powerpc-lsb: 32-bit LSB PowerPC or cisco 4500 version 1 </option>
+    <option value="linux-powerpc64-msb">linux-powerpc-msb: 32-bit MSB PowerPC or cisco 4500 version 1 </option>
+    <option value="linux-riscv64-lsb">linux-riscv64-lsb: 64-bit LSB UCB RISC-V version 1 </option>
+    <option value="linux-s390x-msb">linux-s390x-msb: 64-bit MSB IBM S/390 version 1 </option>
+    <option value="linux-sh-lsb">linux-sh-lsb: 32-bit LSB Renesas SH version 1 </option>
+    <option value="linux-sh-msb">linux-sh-msb: 32-bit MSB Renesas SH version 1 </option>
+    <option value="linux-sparc64-msb">linux-sparc64-msb: 64-bit MSB SPARC V9 relaxed memory ordering version 1 </option>
+    <option value="linux-sparc-msb">linux-sparc-msb: 32-bit MSB SPARC version 1 </option>
+    <option value="linux-tilegx64-lsb">linux-tilegx64-lsb: 64-bit LSB Tilera TILE-Gx version 1 </option>
+    <option value="linux-tilegx64-msb">linux-tilegx64-msb: 64-bit MSB Tilera TILE-Gx version 1 </option>
+    <option value="linux-tilegx-lsb">linux-tilegx-lsb: 32-bit LSB Tilera TILE-Gx version 1 </option>
+    <option value="linux-tilegx-msb">linux-tilegx-msb: 32-bit MSB Tilera TILE-Gx version 1 </option>
+    <option value="linux-x64-lsb">linux-x64-lsb: 64-bit LSB x86-64 version 1 </option>
+    <option value="linux-x86-lsb">linux-x86-lsb: 32-bit LSB Intel 80386 version 1 </option>
+    <option value="linux-xtensa-msb">linux-xtensa-msb: 32-bit MSB Tensilica Xtensa version 1 </option>
+    <option value="osx-x32-lsb">osx-x32-lsb: 32-bit LSB Intel 80386 </option>
+    <option value="osx-x64-lsb">osx-x64-lsb: 64-bit LSB x86-64 </option>
+    </select>
+
+    <label for="kernelversionset"> KERNEL VERSION SET </label>
+    <input type="Text" name="FORMkernel_version_set" id="ter" placeholder="Modify the response of '/bin/uname'">
+
+    <label for="kernelbuildset"> KERNEL BUILD SET </label>
+    <input type="Text" name="FORMkernel_build_set" id="uer" placeholder="Modify the response of '/bin/uname'">
+
+    <label for="hardwareplatformset"> HARDWARE PLATFORM SET </label>
+    <input type="Text" name="FORMhardware_platform_set" id="ver" placeholder="Modify the response of '/bin/uname'">
+
+    <label for="operatingsystemset"> OPERATING SYSTEM SET </label>
+    <input type="Text" name="FORMoperating_system_set" id="xer" placeholder="Modify the response of '/bin/uname'">
+
+    <label for="sshversionset"> SSH VERSION SET </label>
+    <input type="Text" name="FORMssh_version_set" id="yer" placeholder="SSH Version as printed by 'ssh -V in shell emulation'">
+
+    <input type="submit">
+    
+    </form>
+    </div>
+  </body>
+</html>
